@@ -13,47 +13,55 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => (
 
 const IPhoneSVG: React.FC = () => (
     <svg className="w-64 h-auto mx-auto mt-8" viewBox="0 0 300 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="10" width="280" height="580" rx="40" stroke="black" strokeWidth="2"/>
-  <rect x="20" y="20" width="260" height="560" rx="35" stroke="black" strokeWidth="1"/>
-  {/* Header */}
-  <text x="30" y="60" fontSize="18" fill="black" fontWeight="bold">Upcoming</text>
-  {/* Content area */}
-  <rect x="20" y="75" width="260" height="505" rx="20" stroke="black" strokeWidth="1" fill="none"/>
-  {/* Today */}
-  <text x="40" y="110" fontSize="18" fill="black" fontWeight="bold">29th</text>
-  <text x="40" y="130" fontSize="12" fill="black">MAR</text>
-  <text x="100" y="120" fontSize="16" fill="black" fontWeight="bold">Today</text>
-  {/* Create new activity */}
-  <rect x="40" y="150" width="220" height="40" rx="10" stroke="black" strokeWidth="1" strokeDasharray="5,5" fill="none"/>
-  <text x="70" y="175" fontSize="12" fill="black">Create new activity</text>
-  {/* Saturday */}
-  <text x="40" y="230" fontSize="18" fill="black" fontWeight="bold">30th</text>
-  <text x="40" y="250" fontSize="12" fill="black">MAR</text>
-  <text x="100" y="240" fontSize="16" fill="black" fontWeight="bold">Saturday</text>
-  {/* Catan event */}
-  <rect x="40" y="270" width="220" height="60" rx="10" stroke="black" strokeWidth="1" fill="none"/>
-  <circle cx="70" cy="300" r="15" stroke="black" strokeWidth="1" fill="none"/>
-  <text x="100" y="295" fontSize="14" fill="black" fontWeight="bold">Brunch</text>
-  <text x="100" y="315" fontSize="12" fill="black">10:00 PM</text>
-  <rect x="200" y="285" width="50" height="20" rx="10" stroke="black" strokeWidth="1" fill="none"/>
-  <text x="210" y="300" fontSize="10" fill="black">Noam</text>
-  {/* Sunday */}
-  <text x="40" y="370" fontSize="18" fill="black" fontWeight="bold">31st</text>
-  <text x="40" y="390" fontSize="12" fill="black">MAR</text>
-  <text x="100" y="380" fontSize="16" fill="black" fontWeight="bold">Sunday</text>
-  {/* Dinner event */}
-  <rect x="40" y="410" width="220" height="60" rx="10" stroke="black" strokeWidth="1" fill="none"/>
-  <circle cx="70" cy="440" r="15" stroke="black" strokeWidth="1" fill="none"/>
-  <text x="100" y="435" fontSize="14" fill="black" fontWeight="bold">Dinner</text>
-  <text x="100" y="455" fontSize="12" fill="black">6:00 PM</text>
-  {/* Attendee indicators */}
-  <rect x="170" y="430" width="40" height="20" rx="10" stroke="black" strokeWidth="1" fill="none"/>
-  <text x="176" y="444" fontSize="10" fill="black">Anna</text>
-  <rect x="215" y="430" width="40" height="20" rx="10" stroke="black" strokeWidth="1" fill="none"/>
-  <text x="221" y="444" fontSize="10" fill="black">Chris</text>
-  {/* Add button */}
-  <circle cx="250" cy="540" r="25" stroke="black" strokeWidth="2" fill="none"/>
-  <text x="242" y="548" fontSize="30" fill="black">+</text>
+        <rect x="10" y="10" width="280" height="580" rx="40" stroke="black" strokeWidth="2"/>
+      <rect x="20" y="20" width="260" height="560" rx="35" stroke="black" strokeWidth="1"/>
+      {/* Header */}
+      <text x="30" y="60" fontSize="18" fill="black" fontWeight="bold">Upcoming</text>
+      {/* Content area */}
+      <rect x="20" y="75" width="260" height="505" rx="20" stroke="black" strokeWidth="1" fill="none"/>
+      {/* Today */}
+      <g className="fade-in" opacity="0">
+        <text x="40" y="110" fontSize="18" fill="black" fontWeight="bold">29th</text>
+        <text x="40" y="130" fontSize="12" fill="black">MAR</text>
+        <text x="100" y="120" fontSize="16" fill="black" fontWeight="bold">Today</text>
+        {/* Create new activity */}
+        <rect x="40" y="150" width="220" height="40" rx="10" stroke="black" strokeWidth="1" strokeDasharray="5,5" fill="none"/>
+        <text x="70" y="175" fontSize="12" fill="black">Create new activity</text>
+      </g>
+      {/* Saturday */}
+      <g className="fade-in" opacity="0" style={{animationDelay: "0.5s"}}>
+        <text x="40" y="230" fontSize="18" fill="black" fontWeight="bold">30th</text>
+        <text x="40" y="250" fontSize="12" fill="black">MAR</text>
+        <text x="100" y="240" fontSize="16" fill="black" fontWeight="bold">Saturday</text>
+        {/* Catan event */}
+        <rect className="event-box" x="40" y="270" width="220" height="60" rx="10" stroke="black" strokeWidth="1" fill="none"/>
+        <circle cx="70" cy="300" r="15" stroke="black" strokeWidth="1" fill="none"/>
+        <text x="100" y="295" fontSize="14" fill="black" fontWeight="bold">Brunch</text>
+        <text x="100" y="315" fontSize="12" fill="black">10:00 PM</text>
+        <rect x="200" y="285" width="50" height="20" rx="10" stroke="black" strokeWidth="1" fill="none"/>
+        <text x="210" y="300" fontSize="10" fill="black">David</text> 
+      </g>
+      {/* Sunday */}
+      <g className="fade-in" opacity="0" style={{animationDelay: "1s"}}>
+        <text x="40" y="370" fontSize="18" fill="black" fontWeight="bold">31st</text>
+        <text x="40" y="390" fontSize="12" fill="black">MAR</text>
+        <text x="100" y="380" fontSize="16" fill="black" fontWeight="bold">Sunday</text>
+        {/* Dinner event */}
+        <rect className="event-box" x="40" y="410" width="220" height="60" rx="10" stroke="black" strokeWidth="1" fill="none"/>
+        <circle cx="70" cy="440" r="15" stroke="black" strokeWidth="1" fill="none"/>
+        <text x="100" y="435" fontSize="14" fill="black" fontWeight="bold">Dinner</text>
+        <text x="100" y="455" fontSize="12" fill="black">6:00 PM</text>
+        {/* Attendee indicators */}
+        <rect x="170" y="430" width="36" height="20" rx="10" stroke="black" strokeWidth="1" fill="none"/>
+        <text x="176" y="444" fontSize="10" fill="black">Anna</text>
+        <rect x="215" y="430" width="36" height="20" rx="10" stroke="black" strokeWidth="1" fill="none"/>
+        <text x="221" y="444" fontSize="10" fill="black">Chris</text>
+      </g>
+      {/* Add button */}
+      <g className="">
+        <circle cx="250" cy="540" r="25" stroke="black" strokeWidth="2" fill="none"/>
+        <text x="242" y="548" fontSize="30" fill="black">+</text>
+      </g>
     </svg>
   );
  
@@ -88,9 +96,6 @@ const LandingPage: React.FC<LandingPageProps> = () => {
         {/* Top Centered Title and Content */}
         <div className="max-w-3xl text-center z-10 mt-20">
           <h1 className="text-6xl font-bold mb-4">Socials</h1>
-          <p className="text-lg font-light mb-2">
-      Where Friendships and Plans Align.
-    </p>
     <p className="text-base font-light mb-6">
       Create and manage gatherings effortlessly using your phone&apos;s contacts.
     </p>
