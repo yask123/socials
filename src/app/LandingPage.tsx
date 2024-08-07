@@ -92,7 +92,7 @@ const LandingPage: React.FC<LandingPageProps> = () => {
       Where Friendships and Plans Align.
     </p>
     <p className="text-base font-light mb-6">
-      Create and manage gatherings effortlessly using your phone's contacts.
+      Create and manage gatherings effortlessly using your phone&apos;s contacts.
     </p>
         </div>
 
