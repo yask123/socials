@@ -13,7 +13,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => (
 );
 
 const LogoSVG: React.FC = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <svg className="w-16 h-16 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <path d="M100 40
            C 80 20, 40 10, 20 40
            C 0 70, 20 100, 60 90
@@ -110,7 +110,7 @@ const LandingPage: React.FC<LandingPageProps> = () => {
       <nav className="flex justify-between items-center p-4">
         <div className="flex space-x-4">
           <NavLink href="#">Socials</NavLink>
-          <NavLink href="#">Events</NavLink>
+          <NavLink href="/events">Events</NavLink>
         </div>
         <div className="flex space-x-4">
           <NavLink href="#">About</NavLink>
@@ -119,15 +119,17 @@ const LandingPage: React.FC<LandingPageProps> = () => {
 
       {/* Main Content */}
       <main className="flex-grow flex flex-col items-center px-4 relative overflow-hidden">
-        {/* Top Centered Title and Content */}
-        <div className="max-w-3xl text-center z-10 mt-20">
-          <LogoSVG />
-          <h1 className="text-7xl mb-4 font-normal" style={{ fontFamily: "'MedievalSharp', cursive" }}>Socialify</h1>
-          <br/>
-    <p className="text-base font-light mb-6">
-      Create and manage gatherings effortlessly using your phone&apos;s contacts.
-    </p>
+      {/* Top Centered Title and Content */}
+      <div className="max-w-3xl text-center z-10 mt-20">
+        <div className="flex items-center justify-center mb-4">
+          <LogoSVG  /> {/* Adjust size as needed */}
+          <h1 className="text-7xl font-normal" style={{ fontFamily: "'MedievalSharp', cursive" }}>Socialify</h1>
         </div>
+        <br></br>
+        <p className="text-base font-light mb-6">
+          Create and manage gatherings effortlessly using your phone&apos;s contacts.
+        </p>
+      </div>
 
         {/* iPhone SVG below the text */}
         <IPhoneSVG />
