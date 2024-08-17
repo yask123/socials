@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 
 interface NavLinkProps {
@@ -10,6 +11,27 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => (
     {children}
   </a>
 );
+
+const LogoSVG: React.FC = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <path d="M100 40
+           C 80 20, 40 10, 20 40
+           C 0 70, 20 100, 60 90
+           L 100 130
+           L 140 90
+           C 180 100, 200 70, 180 40
+           C 160 10, 120 20, 100 40
+           Z" fill="none" stroke="#000000" stroke-width="2"/>
+  
+  <path d="M30 50 L 90 110 M40 40 L 95 100 M50 35 L 98 90
+           M170 50 L 110 110 M160 40 L 105 100 M150 35 L 102 90" 
+        stroke="#000000" stroke-width="1" fill="none"/>
+  
+  <path d="M100 40 L 100 130" stroke="#000000" stroke-width="4" fill="none"/>
+  
+  <path d="M95 42 Q 85 20, 80 10 M105 42 Q 115 20, 120 10" fill="none" stroke="#000000" stroke-width="1"/>
+</svg>
+)
 
 const IPhoneSVG: React.FC = () => (
     <svg className="w-64 h-auto mx-auto mt-8" viewBox="0 0 300 600" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,6 +101,10 @@ interface LandingPageProps {
 
 const LandingPage: React.FC<LandingPageProps> = () => {
   return (
+    <>
+          <Head>
+        <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
+      </Head>
     <div className="bg-yellow-200 min-h-screen font-sans flex flex-col">
       {/* Navigation */}
       <nav className="flex justify-between items-center p-4">
@@ -95,7 +121,9 @@ const LandingPage: React.FC<LandingPageProps> = () => {
       <main className="flex-grow flex flex-col items-center px-4 relative overflow-hidden">
         {/* Top Centered Title and Content */}
         <div className="max-w-3xl text-center z-10 mt-20">
-          <h1 className="text-6xl font-bold mb-4">Socials</h1>
+          <LogoSVG />
+          <h1 className="text-7xl mb-4 font-normal" style={{ fontFamily: "'MedievalSharp', cursive" }}>Socialify</h1>
+          <br/>
     <p className="text-base font-light mb-6">
       Create and manage gatherings effortlessly using your phone&apos;s contacts.
     </p>
@@ -112,6 +140,7 @@ const LandingPage: React.FC<LandingPageProps> = () => {
         </div>
       </main>
     </div>
+    </>
   );
 };
 
